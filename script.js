@@ -1,10 +1,10 @@
-fetch ('https://jsonplaceholder.typicode.com/users')
+fetch ('./sample.json')
     .then(res => {
         return res.json();
     })
     .then(data => {
-        data.forEach(user => {
-            const markup = `<li>${user.name}</li>`;
+        data.forEach(post => {
+            const markup = `<li>${post.id}</li>`;
 
             document.querySelector('ul').insertAdjacentHTML('beforeend', markup)
         })
